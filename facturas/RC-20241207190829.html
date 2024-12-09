@@ -1,0 +1,140 @@
+
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Factura de Compra</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #009688;
+                    color: #333;
+                }
+                .container {
+                    width: 80%;
+                    margin: 20px auto;
+                    padding: 20px;
+                    background-color: white;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    text-align: center;
+                    color: #2C3E50;
+                    margin-bottom: 20px;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+                table, th, td {
+                    border: 1px solid #ddd;
+                }
+                th {
+                    background-color: #f2f2f2;
+                    padding: 10px;
+                    text-align: left;
+                }
+                td {
+                    padding: 8px;
+                    text-align: right;
+                }
+                td:first-child {
+                    text-align: left;
+                }
+                .totales {
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: right;
+                }
+                .button {
+                    display: block;
+                    width: 200px;
+                    margin: 20px auto;
+                    padding: 10px;
+                    background-color: #3498db;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+                .button:hover {
+                    background-color: #2980b9;
+                }
+                .factura-info {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                }
+                .factura-info div {
+                    width: 48%;
+                }
+                @media print {
+                    .no-print {
+                        display: none;
+                    }
+                }
+            </style>
+            <script>
+                function imprimirFactura() {
+                    window.print();
+                }
+            </script>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Factura de Compra</h1>
+                <div class="factura-info">
+                    <div>
+                        <p><strong>Cliente:</strong> juan</p>
+                        <p><strong>Direccion:</strong> delegacion iztacalco</p>
+                        <p><strong>Fecha:</strong> 2024-12-07</p>
+                    </div>
+                    <div>
+                        <p><strong>Numero de Recibo:</strong> RC-20241207190829</p>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                <tr>
+                    <td>Jabon liquido</td>
+                    <td>4</td>
+                    <td>$10</td>
+                    <td>$40</td>
+                </tr>
+                
+                <tr>
+                    <td>Jabon barra</td>
+                    <td>4</td>
+                    <td>$8</td>
+                    <td>$32</td>
+                </tr>
+                
+                    </tbody>
+                </table>
+                <div class="totales">
+                    <p>Subtotal: $72</p>
+                    <p>Impuestos (20%): $14.4</p>
+                    <p>Total: $86.4</p>
+                </div>
+                <a href="project.html" class="button no-print">Volver a la Pagina Principal</a>
+                <a href="#" class="button no-print" onclick="imprimirFactura()">Imprimir</a>
+                <a href="/download/RC-20241207190829.html" class="button no-print">Descargar Factura</a>
+            </div>
+        </body>
+        </html>
+        

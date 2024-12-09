@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos de Limpieza</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #dcdfe1;
+            background-color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0d1b2a;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 350px; 
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 5%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5bc0de;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1e2a38;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2 {
+            color: #00509e;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #e0e0e0;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #bbb;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            display: block;
+            background-color: #0088cc;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            width: 200px;
+            margin: 20px auto;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .back-button:hover {
+            background-color: #005e7a;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>Cleaning</h1>
+        <p>Bienvenidos a <strong>Cleaning</strong>, una tienda dedicada a proporcionar soluciones de limpieza innovadoras, efectivas y accesibles para hogares, oficinas, y espacios comerciales. Nuestro compromiso con la calidad y el cuidado del medio ambiente nos motiva a ofrecer productos de alta eficiencia que responden a las necesidades actuales de higiene y desinfección.</p>
+
+        <h2>Misión</h2>
+        <p>Nuestra misión en Cleaning es brindar productos de limpieza de excelente calidad que contribuyan a mejorar la calidad de vida de nuestros clientes, promoviendo prácticas de higiene responsables y sostenibles. Nos esforzamos por mantener altos estándares en cada uno de nuestros productos, priorizando siempre la seguridad y el respeto al medio ambiente.</p>
+
+        <h2>Visión</h2>
+        <p>Nuestra visión es convertirnos en la tienda de productos de limpieza de referencia a nivel nacional, reconocida por nuestra excelencia, innovación y compromiso con el bienestar de las personas y el planeta. Aspiramos a liderar el sector de la limpieza responsable, ampliando nuestra presencia y ofreciendo soluciones cada vez más amigables con el entorno.</p>
+
+        <h2>Objetivo</h2>
+        <p>Nuestro objetivo es facilitar el acceso a productos de limpieza de alta calidad que combinen efectividad y responsabilidad ambiental, asegurando que cada cliente encuentre soluciones que se ajusten a sus necesidades. Queremos ser un aliado confiable en la creación de espacios limpios, seguros y saludables para todos.</p>
+
+        <div class="footer">
+            <p><strong>Cleaning, tu aliado en limpieza y sostenibilidad.</strong></p>
+        </div>
+
+        <button class="back-button" onclick="window.location.href='inicio.php'">Regresar a la Página Principal</button>
+    </div>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#00bcd4' },
+                shape: { type: 'circle', stroke: { width: 0 }, polygon: { nb_sides: 5 }, image: { src: 'img/github.svg', width: 100, height: 100 } },
+                opacity: { value: 0.5, random: true, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: '#00509e', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
