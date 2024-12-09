@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=inicio.php">
-    <title>Redirigiendo...</title>
+    <title>Login</title>
 </head>
 <body>
-    <p>Redirigiendo a la página principal... Si no eres redirigido automáticamente, haz clic <a href="inicio.php">aquí</a>.</p>
+    <h1>Bienvenido a nuestro sitio web</h1>
+    
+    <!-- Formulario de login -->
+    <form action="login.php" method="POST">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    
 </body>
 </html>
